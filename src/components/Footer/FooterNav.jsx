@@ -110,7 +110,7 @@ function FooterNav() {
 				</div>
 			</div>
 			<div className="footer-nav-rights">
-				<p>© 2021 Ratepunk. All Rights Reserved.</p>
+				<p>© 2022 Ratepunk. All Rights Reserved.</p>
 			</div>
 		</section>
 	);

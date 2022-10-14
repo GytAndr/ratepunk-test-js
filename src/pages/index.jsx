@@ -11,8 +11,8 @@ export default function Home() {
 				<meta name="description" content="Hotel price comparison" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>
-			{/* <Navbar /> */}
-			{/* <LandingPg /> */}
+			<Navbar />
+			<LandingPg />
 			<Footer />
 		</>
 	);
