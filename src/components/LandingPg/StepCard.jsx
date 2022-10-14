@@ -3,7 +3,7 @@ import Image from "next/image";
 function StepCard({ img, step, title, description }) {
 	return (
 		<div className="step-card">
-			<div className="step-img">
+			<div>
 				<Image src={img} height={140} width={128} alt="step image" />
 			</div>
 			<div className="step-text-container">

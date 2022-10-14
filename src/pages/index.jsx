@@ -12,8 +12,8 @@ export default function Home() {
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			{/* <Navbar /> */}
-			<LandingPg />
-			{/* <Footer /> */}
+			{/* <LandingPg /> */}
+			<Footer />
 		</>
 	);
 }
