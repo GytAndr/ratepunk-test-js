@@ -1,6 +1,6 @@
 import React from "react";
 
-function ReferalCard() {
+function ReferralCard() {
 	return (
 		<div className="referral-card">
 			<h1 className="referral-title">REFER FRIENDS AND GET REWARDS</h1>
@@ -19,4 +19,4 @@ function ReferalCard() {
 	);
 }
 
-export default ReferalCard;
+export default ReferralCard;
