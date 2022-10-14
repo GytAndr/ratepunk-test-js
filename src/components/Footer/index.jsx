@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import FooterNav from "./FooterNav";
 import Rating from "./Rating";
 import Store from "./Store";
 
@@ -23,7 +24,7 @@ function Footer() {
 				</a>
 				<Rating />
 			</section>
-			<section className="footer-nav"></section>
+			<FooterNav />
 		</footer>
 	);
 }
