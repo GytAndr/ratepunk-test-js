@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
+import LandingPg from "../components/LandingPg";
 import Navbar from "../components/Navbar";
 
 export default function Home() {
@@ -10,8 +11,9 @@ export default function Home() {
 				<meta name="description" content="Hotel price comparison" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>
-			<Navbar />
-			<Footer />
+			{/* <Navbar /> */}
+			<LandingPg />
+			{/* <Footer /> */}
 		</>
 	);
 }
