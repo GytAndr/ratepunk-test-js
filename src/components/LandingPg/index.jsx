@@ -1,10 +1,12 @@
 import React from "react";
+import ReferalCard from "./ReferalCard";
 
 import StepCard from "./StepCard";
 
 function LandingPg() {
 	return (
 		<main>
+			<ReferalCard />
 			<StepCard
 				img="/images/invite.svg"
 				step="STEP 1"
