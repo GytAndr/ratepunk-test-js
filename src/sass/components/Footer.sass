@@ -2,14 +2,30 @@
 @use '../typography' as t
 @use './Store'
 .footer
+  background-color: c.$bg-footer--light
+  color: c.$main-text
   &-nav
-    background-color: c.$bg-footer--light
-    display: flex
-    flex-direction: column
+    display: grid
+    margin: 0 auto
+    width: 19.5rem
+    &-description
+      display: flex
+      flex-direction: column
+      gap: 2rem
+      margin-top: 3rem
     &-links
       display: flex
       flex-direction: column
-    &-email
+      margin-top: 3rem
+      gap: 1rem
+    &-contacts
+      margin-top: 2rem
+      display: flex
+      flex-direction: column
+      gap: 1.5rem
+      &-email
+        display: flex
+        gap: 1rem
     &-socials
       display: flex
       gap: 0.5rem
@@ -19,3 +35,6 @@
         border-radius: .5rem
         padding: .5rem
         display: flex
+    &-rights
+      margin: 3rem 0
+      color: c.$grey-text

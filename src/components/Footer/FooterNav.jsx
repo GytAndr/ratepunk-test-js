@@ -26,10 +26,10 @@ function FooterNav() {
 			</div>
 			<div className="footer-nav-contacts">
 				<h4>CONTACT</h4>
-				<div className="footer-nav-email">
+				<div className="footer-nav-contacts-email">
 					<Image
 						src="/images/email-footer.svg"
-						height={16}
+						height={13}
 						width={16}
 						alt="email icon"
 					/>
