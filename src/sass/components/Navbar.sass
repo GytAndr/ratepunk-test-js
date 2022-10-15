@@ -1,65 +1,59 @@
 @use '../typography' as t
 @use '../colors' as c
-header
-  display: flex
-  position: relative
-  z-index: 2
-  align-items: center
-  justify-content: space-between
-  height: 72px
-  padding: 0 2rem
-  background-color: c.$bg-white
-  border: c.$border
-  nav
+
+.header
+  &-logo
     display: flex
+    justify-content: space-between
+    border: c.$border
+    border-bottom: none
+
+  &-btn
+    position: relative
+    display: flex
+    justify-content: center
     align-items: center
-    a
-      font-family: t.$Noto-Sans
-      margin: 0 2rem
-      color: c.$grey-text
-    a:hover ,.active
-      color: c.$active-blue
-  .nav
-    &-logo
-      z-index: 2
-    &-btn
-      padding: 5px
-      cursor: pointer
-      background: transparent
-      border: none
-      outline: none
-      visibility: hidden
-      opacity: 0
-      font-size: 1.8rem
-
-@media screen and (max-width:1024px)
-  header
-
-    .nav-btn
-      visibility: visible
-      opacity: 1
-    nav
-      position: absolute
-      top: 0
-      left: 0
-      z-index: 1
-      height: 14rem
-      width: 100%
-      border: c.$border
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-      justify-content: center
-      gap: 1.5rem
-      background-color: c.$bg-white
-      transition: .35s
-      // transform: translateY(-100vh)
-      .nav-close-btn
+    width: 3rem
+    height: 3rem
+    cursor: pointer
+    transition: all .25s ease-in-out 0s
+    &--burger
+      width: 18px
+      height: 4px
+      background-color: #bdc1c3
+      border: 1px #000 solid
+      border-radius: 100px
+      transition: all .25s ease-in-out 0s
+      &::before,&::after
+        content: ''
         position: absolute
-        top: 1rem
-        right: 2rem
-      a
-        font-size: 1rem
-        color: c.$main-text
-    .responsive-nav
-      height: 0
+        top: 22px
+        right: 15px
+        width: 18px
+        height: 4px
+        background-color: #bdc1c3
+        border: 1px #000 solid
+        border-radius: 100px
+        transition: all .25s ease-in-out 0s
+      &::before
+        transform: translateY(-6px)
+      &::after
+        transform: translateY(6px)
+  /*BUTTON ANIMATIONS*/
+  .header-btn.open .header-btn--burger
+    border: none
+    background: none
+  .header-btn.open .header-btn--burger::before
+    transform: rotate(45deg)
+  .header-btn.open .header-btn--burger::after
+    transform: rotate(-45deg)
+
+  nav
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    height: 190px
+    border: c.$border
+    border-top: none
+  .expanded
+    height: 0

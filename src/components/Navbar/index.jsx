@@ -4,42 +4,29 @@ import Image from "next/image";
 
 function Navbar() {
 	const navRef = useRef();
+	const btnRef = useRef();
 
 	const showNavbar = () => {
-		navRef.current.classList.toggle("responsive-nav");
+		navRef.current.classList.toggle("expanded");
+		btnRef.current.classList.toggle("open");
 	};
+
 	return (
-		<header>
-			<Image
-				className="nav-logo"
-				src="/images/logo.svg"
-				height={32}
-				width={120}
-				alt="logo"
-			/>
+		<header className="header">
+			<div className="header-logo">
+				<Image src="/images/logo.svg" height={32} width={120} alt="logo" />
+
+				<div ref={btnRef} className="header-btn" onClick={showNavbar}>
+					<div className="header-btn--burger"></div>
+				</div>
+			</div>
 			<nav ref={navRef}>
 				<Link href="/">
 					<a className="active">Chrome Extenstion</a>
 				</Link>
 				<Link href="/">Price Comparison</Link>
 				<Link href="/">Blog</Link>
-				<button className="nav-btn nav-close-btn" onClick={showNavbar}>
-					<Image
-						src="/images/close.svg"
-						width={18}
-						height={18}
-						alt="close navigations menu"
-					/>
-				</button>
 			</nav>
-			<button className="nav-btn" onClick={showNavbar}>
-				<Image
-					src="/images/menu.svg"
-					width={20}
-					height={18}
-					alt="open navigations menu"
-				/>
-			</button>
 		</header>
 	);
 }
