@@ -7,6 +7,7 @@
     justify-content: space-between
     border: c.$border
     border-bottom: none
+    padding: .25rem 0rem .25rem 1rem
 
   &-btn
     position: relative
@@ -34,7 +35,7 @@
         background-color: #bdc1c3
         border: 1px #000 solid
         border-radius: 100px
-        transition: all .25s ease-in-out 0s
+        transition: all .25s ease-in-out
       &::before
         transform: translateY(-6px)
       &::after
@@ -52,8 +53,12 @@
     overflow: hidden
     display: flex
     flex-direction: column
-    height: 190px
+    gap: 8px
+    height: 0
     border: c.$border
     border-top: none
+    transition: .35s ease-in-out
+    a
+      padding: .5rem 1rem
   .expanded
-    height: 0
+    height: 150px
