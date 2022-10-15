@@ -22,7 +22,7 @@ function Navbar() {
 			</div>
 			<nav ref={navRef}>
 				<Link href="/">
-					<a className="active">Chrome Extenstion</a>
+					<a>Chrome Extenstion</a>
 				</Link>
 				<Link href="/">Price Comparison</Link>
 				<Link href="/">Blog</Link>
