@@ -30,3 +30,20 @@
       color: c.$main-text
       line-height: 1.5rem
       text-align: center
+@media only screen and (min-width: 992px)
+  .step
+    &-card
+      flex-direction: row
+      gap: 3rem
+      &:nth-of-type(2)
+        flex-direction: row-reverse
+    &-text
+      &--step
+        font-size: 1.25rem
+      &-container
+        align-items: flex-start
+        max-width: 16rem
+      &--description
+        text-align: start
+        font-size: 1.25rem
+        line-height: 2rem
