@@ -50,7 +50,9 @@ function Input() {
 						value="https://ratepunk.com/referral"
 						readOnly
 					></input>
-					<button className="referral-btn-success">{buttonTxt}</button>
+					<button className="referral-btn-success" type="button">
+						{buttonTxt}
+					</button>
 				</div>
 			</div>
 		);
@@ -77,7 +79,7 @@ function Input() {
 	return (
 		<form className="referral-input-wrapper">
 			<ReferralSuccess />
-			{/* <ReferralPending /> */}
+			<ReferralPending />
 		</form>
 	);
 }

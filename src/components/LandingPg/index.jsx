@@ -1,5 +1,5 @@
 import React from "react";
-import ReferalCard from "./ReferalCard";
+import ReferralCard from "./ReferralCard/ReferalCard";
 
 import StepCard from "./StepCard";
 
@@ -7,7 +7,7 @@ function LandingPg() {
 	return (
 		<main>
 			<div className="main-wrapper">
-				<ReferalCard />
+				<ReferralCard />
 				<div className="step-wrapper">
 					<StepCard
 						img="/images/invite.svg"
