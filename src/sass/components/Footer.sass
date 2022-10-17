@@ -2,14 +2,9 @@
 @use '../typography' as t
 
 .footer
-  background-color: c.$bg-footer--light
   color: c.$main-text
   &-stores
     background-color: c.$bg-footer--dark
-    display: flex
-    flex-direction: column
-    align-items: center
-    gap: 1rem
     padding: 2rem
     &-rating
       display: flex
@@ -18,6 +13,11 @@
       margin-top: .5rem
       p
         margin-left: 1rem
+  &-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1rem
 
   &-store
     border: c.$border
@@ -40,6 +40,7 @@
     display: grid
     margin: 0 auto
     width: 19.5rem
+    background-color: c.$bg-footer--light
     &-description
       display: flex
       flex-direction: column
@@ -77,3 +78,13 @@
     &-rights
       margin: 3rem 0
       color: c.$grey-text
+@media only screen and (min-width: 992px)
+  .footer
+    &-wrapper
+      flex-direction: row
+      max-width: 1120px
+      margin: 0 auto
+    &-stores-rating
+      margin-left: 1rem
+      & > p
+        font-size: 1.25rem
