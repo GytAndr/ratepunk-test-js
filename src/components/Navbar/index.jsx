@@ -13,20 +13,22 @@ function Navbar() {
 
 	return (
 		<header className="header">
-			<div className="header-logo">
-				<Image src="/images/logo.svg" height={32} width={120} alt="logo" />
+			<div className="header-wrapper">
+				<div className="header-logo">
+					<Image src="/images/logo.svg" height={32} width={120} alt="logo" />
 
-				<div ref={btnRef} className="header-btn" onClick={showNavbar}>
-					<div className="header-btn--burger"></div>
+					<div ref={btnRef} className="header-btn" onClick={showNavbar}>
+						<div className="header-btn--burger"></div>
+					</div>
 				</div>
+				<nav ref={navRef}>
+					<Link href="/">
+						<a>Chrome Extenstion</a>
+					</Link>
+					<Link href="/">Price Comparison</Link>
+					<Link href="/">Blog</Link>
+				</nav>
 			</div>
-			<nav ref={navRef}>
-				<Link href="/">
-					<a>Chrome Extenstion</a>
-				</Link>
-				<Link href="/">Price Comparison</Link>
-				<Link href="/">Blog</Link>
-			</nav>
 		</header>
 	);
 }

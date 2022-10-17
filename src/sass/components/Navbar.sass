@@ -60,3 +60,23 @@
       color: c.$active-blue
   .expanded
     height: 150px
+
+@media only screen and (min-width: 992px)
+  .header
+    &-wrapper
+      max-width: 1120px
+      margin: 0 auto
+      height: 80px
+      display: flex
+      justify-content: space-between
+    &-logo
+      padding: 0.25rem 0
+    &-btn
+      display: none
+    nav
+      height: auto
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      a
+        font-size: 1.25rem
