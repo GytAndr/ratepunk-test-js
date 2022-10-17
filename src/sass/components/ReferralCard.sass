@@ -26,10 +26,20 @@
     border: c.$border
     border-radius: 8px
     min-height: 3.5rem
+    margin-bottom: 1rem
     background-image: url(/images/email.svg)
     background-repeat: no-repeat
     background-position: 1rem
     text-indent: 3rem
+    &-wrapper
+      display: flex
+      flex-direction: column
+    &-error
+      visibility: hidden
+      margin-bottom: .5rem
+      &.invalid
+        visibility: visible
+        color: #ED6F82
   &-btn
     font-weight: bold
     font-size: 1rem
