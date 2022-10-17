@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "./Input";
 
 function ReferralCard() {
 	return (
@@ -9,11 +10,7 @@ function ReferralCard() {
 				give you 1 coin for each friend that installs our extension. Minimum
 				cash-out at 20 coins.
 			</p>
-			<input
-				className="referral-input"
-				placeholder="Enter your email address"
-			></input>
-			<button className="referral-btn">Get Referral Link</button>
+			<Input />
 			<p className="referral-notice">Limits on max rewards apply.</p>
 		</div>
 	);
