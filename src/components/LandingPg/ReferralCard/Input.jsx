@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
+import request from "/src/api/request.js";
 
 function Input() {
 	const emailRef = useRef();
@@ -21,7 +22,8 @@ function Input() {
 			showError("Please enter valid email format");
 		} else {
 			errorRef.current.classList.remove("invalid");
-			//send data to jsonbin
+			//make 'PUT' request to JSONbin
+			request(emailRef.current.value);
 		}
 	}
 	//Successful email submit component
