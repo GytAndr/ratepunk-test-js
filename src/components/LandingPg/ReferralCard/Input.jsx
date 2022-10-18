@@ -26,6 +26,8 @@ function Input() {
 			errorRef.current.classList.remove("invalid");
 			//make 'PUT' request to JSONbin and retreive referral ID
 			request(emailRef.current.value);
+			//shiw success message
+			toggleEmailSent(true);
 		}
 	}
 	//Successful email submit component
@@ -51,12 +53,10 @@ function Input() {
 				<div className="referral-input-success-jointBtn">
 					<input
 						className="referral-input-success-url"
-						value={`https://ratepunk.com/referral${referralID}`}
+						value="https://ratepunk.com/referral"
 						readOnly
 					></input>
-					<button className="referral-btn-success" type="button">
-						{buttonTxt}
-					</button>
+					<button className="referral-btn-success">{buttonTxt}</button>
 				</div>
 			</div>
 		);

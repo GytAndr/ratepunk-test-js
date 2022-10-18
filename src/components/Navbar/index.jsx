@@ -15,16 +15,10 @@ function Navbar() {
 		<header className="header">
 			<div className="header-wrapper">
 				<div className="header-logo">
-					<Link href="/">
-						<a>
-							<Image
-								src="/images/logo.svg"
-								height={32}
-								width={120}
-								alt="logo"
-							/>
-						</a>
-					</Link>
+					<a href="">
+						<Image src="/images/logo.svg" height={32} width={120} alt="logo" />
+					</a>
+
 					<div ref={btnRef} className="header-btn" onClick={showNavbar}>
 						<div className="header-btn--burger"></div>
 					</div>
