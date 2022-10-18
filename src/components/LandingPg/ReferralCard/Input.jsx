@@ -9,6 +9,8 @@ function Input() {
 		errorRef.current.classList.add("invalid");
 		errorRef.current.innerHTML = message;
 	}
+	const [referralID, setReferralID] = useState("/");
+	const [isEmailSent, toggleEmailSent] = useState(false);
 	//function to check if email format is valid/not empty
 	function checkInput() {
 		function isEmailValid(email) {
@@ -22,7 +24,7 @@ function Input() {
 			showError("Please enter valid email format");
 		} else {
 			errorRef.current.classList.remove("invalid");
-			//make 'PUT' request to JSONbin
+			//make 'PUT' request to JSONbin and retreive referral ID
 			request(emailRef.current.value);
 		}
 	}
@@ -49,7 +51,7 @@ function Input() {
 				<div className="referral-input-success-jointBtn">
 					<input
 						className="referral-input-success-url"
-						value="https://ratepunk.com/referral"
+						value={`https://ratepunk.com/referral${referralID}`}
 						readOnly
 					></input>
 					<button className="referral-btn-success" type="button">
@@ -80,8 +82,7 @@ function Input() {
 	}
 	return (
 		<form className="referral-input-wrapper">
-			<ReferralSuccess />
-			<ReferralPending />
+			{isEmailSent ? <ReferralSuccess /> : <ReferralPending />}
 		</form>
 	);
 }

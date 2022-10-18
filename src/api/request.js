@@ -10,7 +10,7 @@ export default async function submitEmail(email) {
 	const JSONdata = JSON.stringify(data);
 
 	//JSON bin API endpoint
-	const endpoint = "https://api.jsonbin.io/v3/b/634d8faa65b57a31e6999466";
+	const endpoint = "https://api.jsonbin.io/v3/b/634e397b0e6a79321e2c3393";
 
 	//request options for sending data
 	const options = {
@@ -25,5 +25,5 @@ export default async function submitEmail(email) {
 	//send data
 	const response = await fetch(endpoint, options);
 	const result = await response.json();
-	console.log(result);
+	return result.record.id;
 }
